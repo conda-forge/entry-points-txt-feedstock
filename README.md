@@ -3,7 +3,7 @@ About entry-points-txt-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/entry-points-txt-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/jwodder/entry-points-txt
+Home: https://github.com/wheelodex/entry-points-txt
 
 Package license: MIT
 
