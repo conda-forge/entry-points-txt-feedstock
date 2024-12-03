@@ -17,9 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - hatchling
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -27,10 +28,11 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
-  home: https://github.com/jwodder/entry-points-txt
+  home: https://github.com/wheelodex/entry-points-txt
   summary: Read & write entry_points.txt files
   license: MIT
   license_file: LICENSE
