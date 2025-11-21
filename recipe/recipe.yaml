@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: entry-points-txt
-  version: 0.2.1
+  version: "0.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 2bca930f93d510cb1629c434954f7c7166b98c3cc968df7fd3fc270bc3cf06e9
+  sha256: 957f508508a761671f18870edd9deb83b36844c66251e9c8a0df55ee8ae0bf52
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -30,7 +30,9 @@ tests:
       imports:
         - entry_points_txt
       pip_check: true
-      python_version: ["${{ python_min }}.*", "3.13.*"]
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
 
 about:
   summary: Read & write entry_points.txt files
