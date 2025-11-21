@@ -30,7 +30,9 @@ tests:
       imports:
         - entry_points_txt
       pip_check: true
-      python_version: ["${{ python_min }}.*", "3.13.*"]
+      python_version:
+        - ${{ python_min }}.*
+        - 3.*
 
 about:
   summary: Read & write entry_points.txt files
